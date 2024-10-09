@@ -11,6 +11,7 @@ from selenium.webdriver.common.keys import Keys
 class TinderBot:
     def __init__(self):
         self.start_driver()
+        # I give the person 90 seconds to login to Tinder
         time.sleep(90)
 
 
