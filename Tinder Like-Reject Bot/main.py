@@ -45,5 +45,6 @@ class TinderBot:
 
 if __name__ == "__main__":
     tb = TinderBot()
+    #Tinder lets you like 50 people a day
     for i in range(50):
         tb.like()
