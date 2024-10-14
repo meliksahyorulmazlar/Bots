@@ -235,7 +235,7 @@ class CookieClicker:
         elif "centillion" in text:
             return float(text.split(" ")[0]) * pow(10, 303)
         else:
-            return int(cookies.split(" ")[0].replace(",", ""))
+            return int(text.split(" ")[0].replace(",", ""))
 
 
     # enter a time interval.
@@ -265,7 +265,7 @@ class CookieClicker:
                 products = [product for product in products if product != ""]
                 prices = []
                 for product in products:
-                    price = self.convert_large_numbers(number)
+                    price = self.convert_large_numbers(product)
                     prices.append(price)
                 cookies = self.google_driver.find_element(By.CSS_SELECTOR, "#cookies").text
                 cookies = self.convert_large_numbers(cookies)
