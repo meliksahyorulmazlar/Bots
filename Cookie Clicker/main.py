@@ -255,7 +255,6 @@ class CookieClicker:
                 number_of_cookies = self.google_driver.find_element(By.TAG_NAME, "title").text
                 products = self.google_driver.find_elements(By.CLASS_NAME, "price")
                 if len(products) != self.length:
-                    print("hi")
                     body = self.google_driver.find_element(By.CSS_SELECTOR, "body")
                     amount = len(products) - self.length
                     for i in range(amount * 3):
