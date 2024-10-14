@@ -276,7 +276,6 @@ class CookieClicker:
                         if cookies > prices[i]:
                             cookies -= prices[i]
                             link = self.google_driver.find_element(By.ID, f"product{i}")
-                            print(link)
                             link.click()
             except (selenium.common.exceptions.StaleElementReferenceException,selenium.common.exceptions.ElementClickInterceptedException,selenium.common.exceptions.ElementNotInteractableException) as e:
                 continue
