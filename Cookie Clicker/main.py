@@ -280,7 +280,8 @@ class CookieClicker:
                             link.click()
             except (selenium.common.exceptions.StaleElementReferenceException,selenium.common.exceptions.ElementClickInterceptedException,selenium.common.exceptions.ElementNotInteractableException) as e:
                 continue
-            time_interval += 1
+            finally:
+                time_interval += 1
 
 if __name__ == "__main__":
     cc = CookieClicker()
