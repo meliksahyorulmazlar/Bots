@@ -246,6 +246,7 @@ class CookieClicker:
     def play(self):
         time_interval = 5
         while True:
+            print(time_interval)
             try:
                 t1 = time.time()
                 time_passed = False
