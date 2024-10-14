@@ -240,7 +240,8 @@ class CookieClicker:
 
     # enter a time interval.
     # suggested 45
-    def play(self,time_interval:int):
+    def play(self):
+        time_interval = 5
         while True:
             try:
                 t1 = time.time()
@@ -279,6 +280,7 @@ class CookieClicker:
                             link.click()
             except (selenium.common.exceptions.StaleElementReferenceException,selenium.common.exceptions.ElementClickInterceptedException,selenium.common.exceptions.ElementNotInteractableException) as e:
                 continue
+            time_interval += 1
 
 if __name__ == "__main__":
     cc = CookieClicker()
