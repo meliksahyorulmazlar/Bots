@@ -33,6 +33,211 @@ class CookieClicker:
             body.send_keys(Keys.ARROW_DOWN)
         self.length = 2
 
+    def convert_large_numbers(self, text):
+        if "million" in text:
+            return float(text.split(" ")[0]) * pow(10, 6)
+        elif "billion" in text:
+            return float(text.split(" ")[0]) * pow(10, 9)
+        elif "trillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 12)
+        elif "quadrillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 15)
+        elif "quintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 18)
+        elif "sextillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 21)
+        elif "septillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 24)
+        elif "octillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 27)
+        elif "nonillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 30)
+        elif "decillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 33)
+        elif "undecillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 36)
+        elif "duodecillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 39)
+        elif "tredecillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 42)
+        elif "quattuordecillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 45)
+        elif "quindecillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 48)
+        elif "sexdecillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 51)
+        elif "septendecillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 54)
+        elif "octodecillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 57)
+        elif "novemdecillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 60)
+        elif "vigintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 63)
+        elif "unvigintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 66)
+        elif "duovigintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 69)
+        elif "trevigintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 72)
+        elif "quattuorvigintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 75)
+        elif "quinvigintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 78)
+        elif "sexvigintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 81)
+        elif "septenvigintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 84)
+        elif "octovigintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 87)
+        elif "novemvigintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 90)
+        elif "trigintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 93)
+        elif "untrigintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 96)
+        elif "duotrigintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 99)
+        elif "tretrigintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 102)
+        elif "quattuortrigintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 105)
+        elif "quintrigintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 108)
+        elif "sextrigintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 111)
+        elif "septentrigintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 114)
+        elif "octotrigintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 117)
+        elif "novemtrigintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 120)
+        elif "quadragintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 123)
+        elif "unquadragintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 126)
+        elif "duoquadragintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 129)
+        elif "trequadragintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 132)
+        elif "quattuorquadragintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 135)
+        elif "quinquadragintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 138)
+        elif "sexquadragintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 141)
+        elif "septenquadragintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 144)
+        elif "octoquadragintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 147)
+        elif "novemquadragintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 150)
+        elif "quinquagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 153)
+        elif "unquinquagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 156)
+        elif "duoquinquagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 159)
+        elif "trequinquagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 162)
+        elif "quattuorquinquagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 165)
+        elif "quinquinquagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 168)
+        elif "sexquinquagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 171)
+        elif "septenquinquagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 174)
+        elif "octoquinquagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 177)
+        elif "novemquinquagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 180)
+        elif "sexagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 183)
+        elif "unsexagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 186)
+        elif "duosexagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 189)
+        elif "tresexagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 192)
+        elif "quattuorsexagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 195)
+        elif "quinsexagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 198)
+        elif "sexsexagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 201)
+        elif "septensexagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 204)
+        elif "octosexagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 207)
+        elif "novemsexagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 210)
+        elif "septuagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 213)
+        elif "unseptuagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 216)
+        elif "duoseptuagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 219)
+        elif "treseptuagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 222)
+        elif "quattuorseptuagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 225)
+        elif "quinseptuagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 228)
+        elif "sexseptuagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 231)
+        elif "septenseptuagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 234)
+        elif "octoseptuagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 237)
+        elif "novemseptuagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 240)
+        elif "octogintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 243)
+        elif "unoctogintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 246)
+        elif "duooctogintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 249)
+        elif "treoctogintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 252)
+        elif "quattuoroctogintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 255)
+        elif "quinoctogintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 258)
+        elif "sexoctogintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 261)
+        elif "septenoctogintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 264)
+        elif "octooctogintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 267)
+        elif "novemoctogintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 270)
+        elif "nonagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 273)
+        elif "unnonagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 276)
+        elif "duononagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 279)
+        elif "trenonagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 282)
+        elif "quattuornonagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 285)
+        elif "quinnonagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 288)
+        elif "sexnonagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 291)
+        elif "septennonagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 294)
+        elif "octononagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 297)
+        elif "novemnonagintillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 300)
+        elif "centillion" in text:
+            return float(text.split(" ")[0]) * pow(10, 303)
+        else:
+            return int(cookies.split(" ")[0].replace(",", ""))
+
+
     # enter a time interval.
     # suggested 45
     def play(self,time_interval:int):
@@ -59,307 +264,10 @@ class CookieClicker:
                 products = [product for product in products if product != ""]
                 prices = []
                 for product in products:
-                    if "million" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 6)
-                        prices.append(price)
-                    elif "billion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 9)
-                        prices.append(price)
-                    elif "trillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 9)
-                        prices.append(price)
-                    elif "quadrillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 15)
-                        prices.append(price)
-                    elif "quintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 18)
-                        prices.append(price)
-                    elif "sextillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 21)
-                        prices.append(price)
-                    elif "septillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 24)
-                        prices.append(price)
-                    elif "octillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 27)
-                        prices.append(price)
-                    elif "nonillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 30)
-                        prices.append(price)
-                    elif "decillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 33)
-                        prices.append(price)
-                    elif "undecillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 36)
-                        prices.append(price)
-                    elif "duodecillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 39)
-                        prices.append(price)
-                    elif "tredecillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 42)
-                        prices.append(price)
-                    elif "quattuordecillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 45)
-                        prices.append(price)
-                    elif "quindecillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 48)
-                        prices.append(price)
-                    elif "sexdecillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 51)
-                        prices.append(price)
-                    elif "septendecillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 54)
-                        prices.append(price)
-                    elif "octodecillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 57)
-                        prices.append(price)
-                    elif "novemdecillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 60)
-                        prices.append(price)
-                    elif "vigintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 63)
-                        prices.append(price)
-                    elif "unvigintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 66)
-                        prices.append(price)
-                    elif "duovigintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 69)
-                        prices.append(price)
-                    elif "trevigintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 72)
-                        prices.append(price)
-                    elif "quattuorvigintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 75)
-                        prices.append(price)
-                    elif "quinvigintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 78)
-                        prices.append(price)
-                    elif "sexvigintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 81)
-                        prices.append(price)
-                    elif "septenvigintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 84)
-                        prices.append(price)
-                    elif "octovigintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 87)
-                        prices.append(price)
-                    elif "novemvigintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 90)
-                        prices.append(price)
-                    elif "trigintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 93)
-                        prices.append(price)
-                    elif "untrigintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 96)
-                        prices.append(price)
-                    elif "duotrigintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 99)
-                        prices.append(price)
-                    elif "tretrigintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 102)
-                        prices.append(price)
-                    elif "quattuortrigintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 105)
-                        prices.append(price)
-                    elif "quintrigintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 108)
-                        prices.append(price)
-                    elif "sextrigintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 111)
-                        prices.append(price)
-                    elif "septentrigintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 114)
-                        prices.append(price)
-                    elif "octotrigintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 117)
-                        prices.append(price)
-                    elif "novemtrigintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 120)
-                        prices.append(price)
-                    elif "quadragintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 123)
-                        prices.append(price)
-                    elif "unquadragintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 126)
-                        prices.append(price)
-                    elif "duoquadragintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 129)
-                        prices.append(price)
-                    elif "trequadragintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 132)
-                        prices.append(price)
-                    elif "quattuorquadragintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 135)
-                        prices.append(price)
-                    elif "quinquadragintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 138)
-                        prices.append(price)
-                    elif "sexquadragintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 141)
-                        prices.append(price)
-                    elif "septenquadragintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 144)
-                        prices.append(price)
-                    elif "octoquadragintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 147)
-                        prices.append(price)
-                    elif "novemquadragintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 150)
-                        prices.append(price)
-                    elif "quinquagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 153)
-                        prices.append(price)
-                    elif "unquinquagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 156)
-                        prices.append(price)
-                    elif "duoquinquagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 159)
-                        prices.append(price)
-                    elif "trequinquagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 162)
-                        prices.append(price)
-                    elif "quattuorquinquagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 165)
-                        prices.append(price)
-                    elif "quinquinquagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 168)
-                        prices.append(price)
-                    elif "sexquinquagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 171)
-                        prices.append(price)
-                    elif "septenquinquagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 174)
-                        prices.append(price)
-                    elif "octoquinquagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 177)
-                        prices.append(price)
-                    elif "novemquinquagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 180)
-                        prices.append(price)
-                    elif "sexagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 183)
-                        prices.append(price)
-                    elif "unsexagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 186)
-                        prices.append(price)
-                    elif "duosexagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 189)
-                        prices.append(price)
-                    elif "tresexagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 192)
-                        prices.append(price)
-                    elif "quattuorsexagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 195)
-                        prices.append(price)
-                    elif "quinsexagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 198)
-                        prices.append(price)
-                    elif "sexsexagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 201)
-                        prices.append(price)
-                    elif "septensexagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 204)
-                        prices.append(price)
-                    elif "octosexagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 207)
-                        prices.append(price)
-                    elif "novemsexagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 210)
-                        prices.append(price)
-                    elif "septuagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 213)
-                        prices.append(price)
-                    elif "unseptuagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 216)
-                        prices.append(price)
-                    elif "duoseptuagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 219)
-                        prices.append(price)
-                    elif "treseptuagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 222)
-                        prices.append(price)
-                    elif "quattuorseptuagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 225)
-                        prices.append(price)
-                    elif "quinseptuagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 228)
-                        prices.append(price)
-                    elif "sexseptuagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 231)
-                        prices.append(price)
-                    elif "septenseptuagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 234)
-                        prices.append(price)
-                    elif "octoseptuagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 237)
-                        prices.append(price)
-                    elif "novemseptuagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 240)
-                        prices.append(price)
-                    elif "octogintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 243)
-                        prices.append(price)
-                    elif "unoctogintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 246)
-                        prices.append(price)
-                    elif "duooctogintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 249)
-                        prices.append(price)
-                    elif "treoctogintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 252)
-                        prices.append(price)
-                    elif "quattuoroctogintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 255)
-                        prices.append(price)
-                    elif "quinoctogintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 258)
-                        prices.append(price)
-                    elif "sexoctogintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 261)
-                        prices.append(price)
-                    elif "septenoctogintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 264)
-                        prices.append(price)
-                    elif "octooctogintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 267)
-                        prices.append(price)
-                    elif "novemoctogintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 270)
-                        prices.append(price)
-                    elif "nonagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 273)
-                        prices.append(price)
-                    elif "unnonagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 276)
-                        prices.append(price)
-                    elif "duononagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 279)
-                        prices.append(price)
-                    elif "trenonagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 282)
-                        prices.append(price)
-                    elif "quattuornonagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 285)
-                        prices.append(price)
-                    elif "quinnonagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 288)
-                        prices.append(price)
-                    elif "sexnonagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 291)
-                        prices.append(price)
-                    elif "septennonagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 294)
-                        prices.append(price)
-                    elif "octononagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 297)
-                        prices.append(price)
-                    elif "novemnonagintillion" in product:
-                        price = float(product.split(" ")[0]) * pow(10, 300)
-                        prices.append(price)
-                    else:
-                        prices.append(int(product))
+                    price = self.convert_large_numbers(number)
+                    prices.append(price)
                 cookies = self.google_driver.find_element(By.CSS_SELECTOR, "#cookies").text
-                cookies = int(cookies.split(" ")[0].replace(",", ""))
+                cookies = self.convert_large_numbers(cookies)
                 # print(cookies)
                 # print(products)
                 # print(prices)
