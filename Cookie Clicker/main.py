@@ -285,4 +285,4 @@ class CookieClicker:
 
 if __name__ == "__main__":
     cc = CookieClicker()
-    cc.play(45)
+    cc.play()
