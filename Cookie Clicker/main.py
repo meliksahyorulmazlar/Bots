@@ -235,7 +235,6 @@ class CookieClicker:
         elif "centillion" in text:
             return float(text.split("\n")[0]) * pow(10, 303)
         else:
-            print([text])
             return int(text.split("\n")[0].replace(",", "").replace(" cookies",''))
 
     def convert_large_numbers(self,text):
@@ -440,7 +439,6 @@ class CookieClicker:
         elif "centillion" in text:
             return float(text.split(" ")[0]) * pow(10, 303)
         else:
-            print([text])
             return int(text.split("\n")[0].replace(",", "").replace(" cookies",''))
 
     # enter a time interval.
