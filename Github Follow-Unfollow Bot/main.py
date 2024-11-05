@@ -184,6 +184,57 @@ class GitHubBot:
                     button = buttons[0]
                     button.click()
 
+    def unfollow_account(self,account:str):
+        user_page = f"https://github.com/{account}"
+        self.driver.get(user_page)
+        inputs = self.driver.find_elements(By.TAG_NAME, 'input')
+        buttons = [inp for inp in inputs if inp.get_attribute('title') == f'Unfollow {account}']
+        if buttons:
+            button = buttons[0]
+            button.click()
+
+    def unfollow_followed_ones(self):
+        self.followers = []
+        self.following = []
+        self.find_followers()
+        self.find_following()
+
+        accounts = [account for account in self.following if account in self.followers]
+        special = ["emirkaanozdemr","nepthius"]
+        for account in accounts:
+            if account not in special:
+                self.unfollow_account(account)
+
+    def automate(self):
+        while True:
+            t1 = time.time()
+            self.followers = []
+            self.following = []
+            self.find_following()
+            self.find_followers()
+            self.check_accounts()
+            checked = False
+            loop = True
+            while loop == True:
+                t2 = time.time()
+                if t2-t1 > 2700 and checked == False:
+                    self.unfollow_followed_ones()
+                    checked = True
+                    loop = False
+
+            new_loop = True
+            while new_loop:
+                t2 = time.time()
+                if t2-t1 >= 3600:
+                    new_loop = False
+
+
 if __name__ == "__main__":
     github_bot = GitHubBot()
-    github_bot.check_accounts()
+    github_bot.automate()
+
+
+
+
+
+
