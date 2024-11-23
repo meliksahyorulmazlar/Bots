@@ -168,8 +168,6 @@ class GitHubBot:
             t1 = time.time()
             self.followers = []
             self.following = {}
-            self.find_following()
-            self.find_followers()
             self.check_accounts()
             self.unfollow_followed_ones()
             self.unfollow_following()
