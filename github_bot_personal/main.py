@@ -13,6 +13,7 @@ class GitHubBot:
         self.special = {'GhostOf0days': {'day': 9, 'month': 8, 'year': 2023}, 'YangletLiu': {'day': 9, 'month': 8, 'year': 2023}, 'Chriun': {'day': 9, 'month': 8, 'year': 2023}, 'Allan-Feng': {'day': 9, 'month': 8, 'year': 2023}, 'aalyaz': {'day': 9, 'month': 8, 'year': 2023}, 'cshao23': {'day': 9, 'month': 8, 'year': 2023}, 'philiplpaterson': {'day': 9, 'month': 8, 'year': 2023}, 'connorhakan8': {'day': 9, 'month': 8, 'year': 2023}, 'nepthius': {'day': 9, 'month': 8, 'year': 2023}, 'enisaras': {'day': 9, 'month': 8, 'year': 2023}, 'Hamid-Mofidi': {'day': 9, 'month': 8, 'year': 2023}, 'Jshot117': {'day': 9, 'month': 8, 'year': 2023}, 'emirkaanozdemr': {'day': 9, 'month': 8, 'year': 2023}}
         self.followers = []
         self.following = {}
+        self.login()
 
 
     def find_following(self):
