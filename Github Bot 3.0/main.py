@@ -157,7 +157,15 @@ class GithubBot:
             else:
                 data_dictionary['result'] = True
                 data_dictionary['days_to_follow'] = -1
-
+            try:
+                with open('results.json','r') as f:
+                    dictionary = json.load(f)
+                with open('results.json','w') as f:
+                    dictionary[account] = data_dictionary
+                    json.dump(dictionary,f,indent=4)
+            except FileNotFoundError:
+                with open('results.json','w') as f:
+                    json.dump({account:data_dictionary},f,indent=4)
             print(f"Successfully unfollowed {account}!")
         else:
             print(f"Error: {response.status_code}")
