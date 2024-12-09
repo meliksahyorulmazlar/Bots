@@ -293,14 +293,17 @@ class GithubBot:
                 for i in range(5):
                     print(f"{i} seconds, {5 - i} seconds left to restart")
                     time.sleep(1)
-
+                    
+        count = 0
         for account in accounts:
             if account not in self.blacklist:
                 if account not in self.special:
                     if account not in self.following:
                         if account not in self.followers:
-                            time.sleep(1)
-                            self.follow_one_account(account)
+                            if count != 500:
+                                time.sleep(1)
+                                self.follow_one_account(account)
+                                count += 1
 
 
     # This method automates the entire process on repeat
@@ -308,7 +311,9 @@ class GithubBot:
         while True:
             t1 = time.time()
             self.follow_accounts()
+
             self.unfollow_accounts()
+
             loop = True
             while loop:
                 t2 = time.time()
@@ -319,4 +324,5 @@ class GithubBot:
                     time.sleep(2)
 
 if __name__ == "__main__":
-    bot = GithubBot()
+    #bot = GithubBot()
+    pass
