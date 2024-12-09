@@ -306,8 +306,17 @@ class GithubBot:
     # This method automates the entire process on repeat
     def automate(self):
         while True:
+            t1 = time.time()
             self.follow_accounts()
             self.unfollow_accounts()
+            loop = True
+            while loop:
+                t2 = time.time()
+                if t2- t1 > 3600:
+                    loop = False
+                else:
+                    print(f"{t2-t1} seconds have gone by.{3600-t1} seconds left")
+                    time.sleep(2)
 
 if __name__ == "__main__":
     bot = GithubBot()
