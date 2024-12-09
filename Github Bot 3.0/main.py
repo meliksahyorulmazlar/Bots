@@ -176,6 +176,7 @@ class GithubBot:
         for account in following:
             if account not in self.special:
                 if account in self.followers:
+                    time.sleep(1)
                     self.unfollow_one_account(account)
                 else:
                     date_string = following[account].split("-")
@@ -186,6 +187,7 @@ class GithubBot:
                     d2 = datetime.datetime.now()
                     days = (d2-d1).days
                     if days >= 7:
+                        time.sleep(1)
                         self.unfollow_one_account(account)
                         d2_day = d2.day
                         d2_month = d2.month
@@ -284,17 +286,14 @@ class GithubBot:
                     print(f"{i} seconds, {5 - i} seconds left to restart")
                     time.sleep(1)
 
-        count = 0
         for account in accounts:
             if account not in self.blacklist:
                 if account not in self.special:
                     if account not in self.following:
                         if account not in self.followers:
-                            if count != 10:
-                                self.follow_one_account(account)
-                                count += 1
-                            else:
-                                break
+                            time.sleep(1)
+                            self.follow_one_account(account)
+
 
     # This method automates the entire process on repeat
     def automate(self):
