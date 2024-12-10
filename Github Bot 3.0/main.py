@@ -86,23 +86,24 @@ class GithubBot:
         url = f"https://api.github.com/user/following/{account}"
         response = requests.put(url, headers=self.headers)
         if response.status_code == 204:
-            day = datetime.datetime.now().day
-            month = datetime.datetime.now().month
-            year = datetime.datetime.now().year
-            date_string = f"{day}-{month}-{year}"
-            try:
-                with open('following.json','r') as f:
-                    following = json.load(f)
-                    following[account] = date_string
-                with open('following.json', 'w') as f:
-                    json.dump(following,f,indent=4)
-            except FileNotFoundError:
-                with open('following.json','w') as f:
-                    following = {}
-                    following[account] = date_string
-                with open('following.json', 'w') as f:
-                    json.dump(following, f, indent=4)
-            print(f"Successfully followed {account}!")
+            if self.check_your_following(account):
+                day = datetime.datetime.now().day
+                month = datetime.datetime.now().month
+                year = datetime.datetime.now().year
+                date_string = f"{day}-{month}-{year}"
+                try:
+                    with open('following.json','r') as f:
+                        following = json.load(f)
+                        following[account] = date_string
+                    with open('following.json', 'w') as f:
+                        json.dump(following,f,indent=4)
+                except FileNotFoundError:
+                    with open('following.json','w') as f:
+                        following = {}
+                        following[account] = date_string
+                    with open('following.json', 'w') as f:
+                        json.dump(following, f, indent=4)
+                print(f"Successfully followed {account}!")
         else:
             print(f"Error: {response.status_code}")
             print('Time to give a break')
@@ -128,6 +129,26 @@ class GithubBot:
                 print(f"{i} seconds.{5 - i} seconds to restart")
                 time.sleep(1)
             self.check_following(account)
+
+    # This method checks if you are actually following the account
+    # I added this method because there are accounts that the API says that you followed but in reality you did not end up following them
+    def check_your_following(self,account:str)->bool:
+        url = f"https://api.github.com/users/meliksahyorulmazlar/following/{account}"
+
+        response = requests.get(url, headers=self.headers)
+
+        if response.status_code == 204:
+            return True
+        elif response.status_code == 404:
+            return False
+        else:
+            print(f"Error: {response.status_code}")
+            print('Time to give a break')
+            for i in range(5):
+                print(f"{i} seconds.{5 - i} seconds to restart")
+                time.sleep(1)
+            self.check_following(account)
+
 
     # The following method unfollows one specific GitHub account
     def unfollow_one_account(self,account:str):
@@ -157,6 +178,7 @@ class GithubBot:
             else:
                 data_dictionary['result'] = True
                 data_dictionary['days_to_follow'] = -1
+
             try:
                 with open('results.json','r') as f:
                     dictionary = json.load(f)
@@ -166,6 +188,7 @@ class GithubBot:
             except FileNotFoundError:
                 with open('results.json','w') as f:
                     json.dump({account:data_dictionary},f,indent=4)
+
             print(f"Successfully unfollowed {account}!")
         else:
             print(f"Error: {response.status_code}")
@@ -293,7 +316,7 @@ class GithubBot:
                 for i in range(5):
                     print(f"{i} seconds, {5 - i} seconds left to restart")
                     time.sleep(1)
-                    
+
         count = 0
         for account in accounts:
             if account not in self.blacklist:
@@ -303,7 +326,8 @@ class GithubBot:
                             if count != 500:
                                 time.sleep(1)
                                 self.follow_one_account(account)
-                                count += 1
+                                if self.check_your_following(account):
+                                    count += 1
 
 
     # This method automates the entire process on repeat
@@ -311,18 +335,19 @@ class GithubBot:
         while True:
             t1 = time.time()
             self.follow_accounts()
-
             self.unfollow_accounts()
 
             loop = True
             while loop:
+
                 t2 = time.time()
-                if t2- t1 > 3600:
+                if t2 - t1 >3600:
                     loop = False
                 else:
-                    print(f"{t2-t1} seconds have gone by.{3600-t1} seconds left")
+                    print(f"{t2-t1} seconds have gone by. {3600-t1} seconds left.")
                     time.sleep(2)
 
 if __name__ == "__main__":
-    #bot = GithubBot()
-    pass
+    bot = GithubBot()
+
+
