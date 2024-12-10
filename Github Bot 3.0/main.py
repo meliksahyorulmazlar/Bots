@@ -344,7 +344,7 @@ class GithubBot:
                 if t2 - t1 >3600:
                     loop = False
                 else:
-                    print(f"{t2-t1} seconds have gone by. {3600-t1} seconds left.")
+                    print(f"{t2-t1} seconds have gone by. {3600-(t2-t1)} seconds left.")
                     time.sleep(2)
 
 if __name__ == "__main__":
